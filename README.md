@@ -7,9 +7,9 @@ Make sure you are **navigated to the correct directory** with the Dockerfile (in
 ## 2. Create Local Docker Image ##
 Create an image
 ```bash
-docker build -t ghcr.io/nlp-suite/MALLET-docker:main .
+docker build -t ghcr.io/nlp-suite/mallet-docker:main .
 ```
-This command uses the Dockefile instructions to create an image of your local repository. This image will be tagged as `ghcr.io/nlp-suite/MALLET-docker:main`. It will be stored in the local Docker registry on your machine.
+This command uses the Dockefile instructions to create an image of your local repository. This image will be tagged as `ghcr.io/nlp-suite/mallet-docker:main`. It will be stored in the local Docker registry on your machine.
 
 ## 3. Login to your account on the GHCR with Docker ##
 A) Create a personal access token for your GitHub account. You can do this on GitHub by navigating to Settings>Developer Settings>Tokens(Classic)
@@ -27,10 +27,10 @@ Replacing USERNAME with your GitHub username. It should return the statement "Lo
 
 ## 4. Push the image to GHCR
 ```bash
-docker push ghcr.io/nlp-suite/MALLET-docker:main
+docker push ghcr.io/nlp-suite/mallet-docker:main
 ```
 ## 5. Check if update is successful
 Run the executable file from the nlp-suite-runner. If your container is cached and not pulling the latest image, run the command
 ```bash
-docker pull ghcr.io/nlp-suite/MALLET-docker:main
+docker pull ghcr.io/nlp-suite/mallet-docker:main
 ```
