@@ -20,10 +20,10 @@ ENV CLASSPATH="${MALLET_HOME}/class"
 # Link mallet script (optional now, but can keep, makes it easier to run commands)
 RUN ln -s /opt/mallet/bin/mallet /usr/local/bin/mallet
 
-# Add the FastAPI app and input file
-COPY api.py /app/api.py
+# Add the FastAPI app and input file (safe location -> optional folder?)
+COPY api.py /opt/mallet_api/api.py
 
-WORKDIR /app
+WORKDIR /opt/mallet_api
 
 EXPOSE 5050
 
